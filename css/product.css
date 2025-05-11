@@ -1,0 +1,135 @@
+.product-container {
+    display: grid;
+    grid-template-areas: 'prd-img prd-dt';
+    grid-template-columns: 50% 50%;
+}
+
+.product-container > div {
+    padding: 15px;
+    /* border: 1px solid; */
+}
+
+.product-images {
+    grid-area: prd-img;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+.product-details {
+    grid-area: prd-dt;
+    display: flex;
+    align-items: center;
+}
+
+/* Product Images */
+.img-thumb {
+    max-width: 500px;
+    margin: auto;
+}
+
+.product-images img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: auto;
+}
+
+.product-images .img-small {
+    display: flex;
+    column-gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.product-images .img-small img {
+    object-fit: cover;
+    width: 23%;
+}
+
+/* Product Details */
+.product-details h2 {
+    font-weight: 600;
+}
+
+.product-details p {
+    font-size: 14px;
+    /* color: #666; */
+    margin-bottom: 20px;
+}
+
+.product-details .description {
+    max-width: 500px;
+}
+
+.buy-now {
+    width: 100%;
+    height: 50px;
+}
+
+.product-size-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Start Btn and couner Area*/
+.btn-and-counter {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.add-cart {
+    width: 100%;
+}
+
+/* Start Quantity Counter */
+.counter {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: var(--topback);
+    margin-right: 30px;
+}
+
+.counter span {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.counter .plus,
+.counter .minus {
+    border: 0;
+    outline: 0;
+    padding: 10px;
+    width: 80px;
+    background: none;
+    cursor: pointer;
+}
+
+.counter span.num {
+    font-size: 20px;
+    border-right: 2px solid rgba(0,0,0,0.2);
+    border-left: 2px solid rgba(0,0,0,0.2);
+}
+/* End Btn and couner Area*/
+
+
+/* Responsive */
+@media only screen and (max-width: 1150px) {
+    .product-container {
+        display: grid;
+        grid-template-areas: 'prd-img prd-img'
+                             'prd-dt prd-dt';
+    }
+    .product-details {
+        justify-content: center;
+    }
+}

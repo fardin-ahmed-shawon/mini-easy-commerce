@@ -1,0 +1,63 @@
+/* Carousel Slider area */
+.carousel-inner {
+    max-height: 600px;
+}
+
+/* Info area */
+.info-icons {
+    font-size: 25px;
+}
+
+.info-area h5 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.info-area p {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+/* Home 2x grid container inner */
+.btn-see-all {
+    margin-right: 10px;
+    padding: 20px 30px;
+}
+
+.title-align-left p {
+    padding-right: 10px;
+}
+
+.btn-align-end {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+@media only screen and (max-width: 340px) {
+    .btn-see-all {
+        padding: 10px;
+    }
+    .grid-container-2x h1 {
+        font-size: 18px;
+    }
+    .grid-container-2x p {
+        font-size: 13px;
+    }
+}
+
+/* Category Area */
+.category button {
+    color: var(--theme);
+    width: 100%;
+}
+.category button:hover {
+    color: var(--themehover);
+}
+
+.category-card {
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+    text-transform: uppercase;
+}
