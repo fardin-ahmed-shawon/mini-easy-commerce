@@ -122,10 +122,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["mark_canceled_both"]))
             </div>
             <br><hr><br>
             <div class="row">
-              <h1>Cash On Delivery</h1>
-              <!-- <form class="form-group" action="#">
-                <input type="search" name="search" id="search" placeholder="Search Invoice No" class="form-control">
-              </form> -->
               <!-- Table Area -->
               <div style="overflow-y: auto;">
                 <table class="table table-under-bordered">
@@ -200,99 +196,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["mark_canceled_both"]))
                </table>
               </div>
             </div>
-            <br><hr><br>
-            <div class="row">
-                <h1>Mobile Banking</h1>
-                <!-- <form class="form-group" action="#">
-                  <input type="search" name="search" id="search" placeholder="Search Invoice No" class="form-control">
-                </form> -->
-                <!-- Table Area -->
-                <div style="overflow-y: auto;">
-                  <table class="table table-under-bordered">
-                    <tbody>
-                        <tr>
-                          <th>Serial No</th>
-                          <th>Invoice No</th>
-                          <th>Order No</th>
-                          <th>Order Status</th>
-                          <th>Payment Method</th>
-                          <th>Invoice List</th>
-                          <th>Shipped</th>
-                          <th>Completed</th>
-                          <th>Canceled</th>
-                        </tr>
 
-                        <?php
-                          // Query to retrieve data from payment_info table
-                          $sql = "SELECT invoice_no, 
-                                  GROUP_CONCAT(CASE 
-                                              WHEN order_status != 'Pending' AND order_visibility = 'Show' 
-                                              THEN order_no 
-                                              END SEPARATOR ', ') as order_no, 
-                                  serial_no, 
-                                  order_status, 
-                                  order_visibility, 
-                                  payment_method, 
-                                  acc_number, 
-                                  transaction_id, 
-                                  payment_date, 
-                                  payment_status 
-                                  FROM payment_info 
-                                  WHERE order_visibility = 'Show'
-                                  GROUP BY invoice_no";
-                          $result = $conn->query($sql);
-
-                          $count = 1;
-                          if ($result->num_rows > 0) {
-                              while ($row = $result->fetch_assoc()) {
-                                  if ($row["payment_status"] == "Paid") {
-                                      echo "<tr>";
-                                      echo "<td>" . $count . "</td>";
-                                      echo "<td>" . $row["invoice_no"] . "</td>";
-                                      echo "<td>" . $row["order_no"] . "</td>";
-                                      echo "<td class='order-status'>" . $row["order_status"] . "</td>";
-                                      echo "<td>" . $row["payment_method"] . "</td>";
-
-                                      //echo '<td class="invoice-button"><button onclick="window.location.href = \'invoice.php?inv='.$row["invoice_no"].'\'" class="btn btn-dark">See Invoice</button></td>';
-
-                                      echo '<td class="invoice-button">
-                                      <a href="invoice.php?inv='.$row['invoice_no'].'" class="btn btn-dark">See Invoice</a>
-                                      </td>';
-
-                                      echo '
-                                          <td class="shipped-button">
-                                            <form method="post" action="">
-                                                <input type="hidden" name="order_no" value="' . $row["order_no"] . '">
-                                                <input type="hidden" name="invoice_no" value="' . $row["invoice_no"] . '">
-                                                <button type="submit" name="mark_shipped_both" class="btn btn-success">Mark As Shipped</button>
-                                            </form>
-                                          </td>
-                                      
-                                          <td class="completed-button">
-                                            <form method="post" action="">
-                                                  <input type="hidden" name="order_no" value="' . $row["order_no"] . '">
-                                                  <input type="hidden" name="invoice_no" value="' . $row["invoice_no"] . '">
-                                                  <button type="submit" name="mark_completed_both" class="btn btn-success">Mark As Completed</button>
-                                            </form>
-                                          </td>
-                                          <td class="canceled-button">
-                                            <form method="post" action="">
-                                                  <input type="hidden" name="order_no" value="' . $row["order_no"] . '">
-                                                  <input type="hidden" name="invoice_no" value="' . $row["invoice_no"] . '">
-                                                  <button type="submit" name="mark_canceled_both" class="btn btn-danger">Mark As Canceled</button>
-                                            </form>
-                                          </td>';
-                                      echo "</tr>";
-                                      $count++;
-                                  }
-                              }
-                          }
-                          ?>
-
-                    </tbody>
-                 </table>
-                </div>
-            </div>
           </div>
           <!--------------------------->
           <!-- END INVOICE AREA -->

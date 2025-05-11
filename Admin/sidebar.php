@@ -67,12 +67,6 @@
               </a>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="viewCustomers.php">
-                <span class="menu-title">View Customers</span>
-                <i class="mdi mdi-account menu-icon"></i>
-              </a>
-            </li>
 
             <li class="nav-item">
               <a class="nav-link" data-bs-toggle="collapse" href="#order" aria-expanded="false" aria-controls="order">
@@ -91,12 +85,6 @@
               </div>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="viewPayments.php">
-                <span class="menu-title">View Payments</span>
-                <i class="mdi mdi-currency-usd menu-icon"></i>
-              </a>
-            </li>
             
             <li class="nav-item">
               <a class="nav-link" href="makeInvoice.php">

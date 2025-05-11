@@ -77,8 +77,7 @@ include('database/dbConnection.php');
                 </aside>
                 <div class="col-lg-9">
                                         <section class="content-body p-xl-4">
-                        <h2>Lioo BD</h2>
-                        <p>lioobd.com</p>
+                        <h2>Easy Tech Solutions</h2>
                         
                         <hr class="my-5">
                         <div class="row" style="max-width: 920px">

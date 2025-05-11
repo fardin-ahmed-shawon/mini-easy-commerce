@@ -77,7 +77,6 @@ $result = $conn->query($sql);
                   <tbody>
                     <tr>
                       <th>Order No</th>
-                      <th>User ID</th>
                       <th>Customer Phone</th>
                       <th>Shipping Address</th>
                       <th>Invoice No</th>
@@ -94,7 +93,6 @@ $result = $conn->query($sql);
                                         while ($row = $result->fetch_assoc()) {
                                             echo "<tr>
                                                 <td>{$row['order_no']}</td>
-                                                <td>{$row['user_id']}</td>
                                                 <td>{$row['user_phone']}</td>
                                                 <td>{$row['user_address']}</td>
                                                 <td>{$row['invoice_no']}</td>

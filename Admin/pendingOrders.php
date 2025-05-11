@@ -79,7 +79,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['accept_order'])) {
                   <tbody>
                     <tr>
                       <th>Order No</th>
-                      <th>Customer ID</th>
                       <th>Customer Phone</th>
                       <th>Invoice No</th>
                       <th>Product ID</th>
@@ -102,7 +101,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['accept_order'])) {
                           //if ($row["order_status"] == 'Pending') {
                                 echo "<tr>
                                 <td>$row[order_no]</td>
-                                <td>$row[user_id]</td>
                                 <td>$row[user_phone]</td>
                                 <td>$row[invoice_no]</td>
                                 <td>$row[product_id]</td>
