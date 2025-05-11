@@ -101,8 +101,8 @@ nav .inner {
 /* Start Search Area */
 .search-area {
     margin: 0 15px;
-    border-radius: 25px;
-    border: 1px solid var(--black);
+    border-radius: 5px;
+    border: 1px solid #606060;
 }
 
 .search-row{
@@ -167,9 +167,17 @@ nav .inner {
 .cart-btn,
 .login-btn {
     display: flex;
-    width: 33.33%;
+    width: 50%;
     align-items: center;
     justify-content: center;
+}
+.call {
+    align-items: end;
+    justify-content: end;
+}
+.cart-btn {
+    align-items: end;
+    justify-content: end;
 }
 
 .login-btn {
@@ -263,7 +271,7 @@ nav .inner {
 }
 
 .bottom-nav-mobile ul li {
-    width: 20%;
+    width: 25%;
     margin-right: 5px;
     text-align: center;
 }
@@ -284,9 +292,9 @@ nav .inner {
 
 /* Responsive Design */
 @media only screen and (max-width: 1450px) {
-    .call {
+    /* .call {
         display: none;
-    }
+    } */
     .cart-btn,
     .login-btn {
         width: 50%;

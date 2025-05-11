@@ -1,3 +1,11 @@
+<style>
+    .search-area {
+    margin: 0 15px;
+    border-radius: 5px;
+    /* background: var(--topback); */
+    /* border: 2px solid #606060; */
+}
+</style>
 <!--==================================-->
 <!--========== START NAVBAR ==========-->
 <!--==================================-->
@@ -55,13 +63,13 @@
                     </div> -->
                 </div>
 
-                <div class="login-btn" onclick="window.location.href='registration.php'">
+                <!-- <div class="login-btn" onclick="window.location.href='registration.php'">
                     <i class="ri-user-line"></i>
                     <div class="txt-area">
                         <p class="bold-title">Account</p>
                         <p class="gray-title">Login/Signup</p>
                     </div>
-                </div>
+                </div> -->
             </div>
 
         </div>

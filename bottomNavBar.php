@@ -24,10 +24,10 @@
                 </div>
                 <p>Cart</p>
             </a></li>
-            <li><a href="registration.php">
+            <!-- <li><a href="registration.php">
                 <i class="ri-user-line"></i>
                 <p>Account</p>
-            </a></li>
+            </a></li> -->
         </ul>
     </div>
 </div>
